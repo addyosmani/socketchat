@@ -1,12 +1,10 @@
-##############
-# AOL Lounge #
-##############
+#####################
+# SocketStream Chat #
+#####################
 
-Last updated: 23rd May 2011
 
-Internal AOL app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
+SocketStream app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
 
-User data from Atlas is cached in Redis. No other databases are used.
 
 
 INSTALL
