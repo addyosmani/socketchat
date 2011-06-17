@@ -8,5 +8,3 @@ exports.down = (id, value) ->
 
 # Scolling is possible on both windows using the mouse wheel, though we need to make this more apparent
 exports.enable = (divId, adjustmentLevel) ->
- 
-        
