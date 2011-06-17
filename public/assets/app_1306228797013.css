@@ -1,0 +1,415 @@
+.hidden {
+  display: none;
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Lato Bold"), local("Lato-Bold"), url("/fonts/lato/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"), local("Lato-Light"), url("/fonts/lato/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: local("Lato Bold Italic"), local("Lato-BoldItalic"), url("/fonts/lato/Lato-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 300;
+  src: local("Lato Light Italic"), local("Lato-LightItalic"), url("/fonts/lato/Lato-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"), local("Lato-Regular"), url("/fonts/lato/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Lato Italic"), local("Lato-Italic"), url("/fonts/lato/Lato-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Droid Sans Mono";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Droid Sans Mono"), local("Droid-Sans-Mono"), url("/fonts/Droid_Sans_Mono/DroidSansMono.ttf") format("truetype");
+}
+input {
+  outline: none;
+}
+body {
+  font-size: 62.5%;
+  font-family: "Lato", helvetica;
+  background-color: #ddd;
+  background-color: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  min-height: 50em;
+  color: #777;
+  text-shadow: 1px 1px 1px #fff;
+}
+#signIn {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  background-color: #ddd;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -moz-linear-gradient(top, #fff, #ddd);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+#signIn h1 {
+  margin: 10em 0em 1em;
+  font-size: 20pt;
+  color: #888;
+  font-weight: 300;
+}
+#signIn input[type="text"] {
+  text-align: center;
+  font-size: 20pt;
+  padding: 5px;
+  border: solid 1px #ccc;
+  color: #555;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#signInError {
+  margin-top: 10px;
+  color: #f55;
+  font-size: 12pt;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+#wrapper {
+  margin: 0 auto;
+  width: 96em;
+}
+#header {
+  margin: 1em 0em;
+  text-align: left;
+}
+#logo {
+  position: relative;
+  height: 5em;
+}
+#left {
+  float: left;
+}
+#left #messageContainer {
+  border: solid 1px #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  width: 70em;
+  min-height: 45em;
+  border: 0px solid rgba(0,0,0,0.49);
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
+  -webkit-box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+  box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+}
+#left #messages {
+  overflow: hidden;
+  height: 44em;
+  padding: 1em 2em 0em;
+}
+#left #messages .message:first {
+  margin-top: 2em;
+}
+#left #messages .message:last {
+  margin-bottom: 2em;
+}
+#left #messages .message {
+  float: left;
+  width: 67em;
+  border: solid 1px #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  clear: both;
+  border: 0px solid rgba(0,0,0,0.49);
+  border-radius: 10px;
+}
+#left #messages .message .avatar {
+  float: left;
+  width: 30px;
+  height: 30px;
+  border: solid 1px #ccc;
+  margin: 0.5em;
+}
+#left #messages .message .body {
+  width: 90%;
+  margin: 0.7em;
+  margin-left: 0em;
+  float: right;
+  font-size: 12pt;
+}
+#left form#sendMessage {
+  position: relative;
+  background: #444;
+  width: 68em;
+  margin-top: 2em;
+  padding: 1em;
+  height: 5em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 12px 15px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0 0 12px 15px rgba(0,0,0,0.25);
+  box-shadow: inset 0 0 12px 15px rgba(0,0,0,0.25);
+  background-color: #444;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#444));
+  background-image: -moz-linear-gradient(top, #333, #444);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+#left form#sendMessage #newMessage {
+  font-size: 16pt;
+  padding: 0.5em;
+  width: 26.35em;
+  margin-right: 0.5em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: none;
+  color: #fff;
+  background: none;
+  text-shadow: 1px 1px 1px #000;
+}
+#left form#sendMessage #sendButton {
+  width: 4em;
+  padding: 0.5em;
+  font-size: 16pt;
+  border: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background: #7dd629;
+  background-color: #559716;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#7dd629), to(#559716));
+  background-image: -moz-linear-gradient(top, #7dd629, #559716);
+  color: #fff;
+  text-shadow: 1px 1px 1px #39680d;
+  -webkit-transition: box-shadow 0.3s linear;
+}
+#left form#sendMessage input[type="submit"]:hover {
+  -webkit-box-shadow: 0 0 10px 4px rgba(123,255,0,0.5);
+  -moz-box-shadow: 0 0 10px 4px rgba(123,255,0,0.5);
+  box-shadow: 0 0 10px 4px rgba(123,255,0,0.5);
+  cursor: pointer;
+}
+#left #footer {
+  line-height: 1.5em;
+  padding: 1.5em 0;
+}
+#left #footer a {
+  color: #444;
+  text-decoration: none;
+}
+#right {
+  float: right;
+  width: 24em;
+}
+#right #peopleContainer {
+  height: 35em;
+  border: solid 1px #ccc;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 0px solid rgba(0,0,0,0.49);
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf);
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9));
+  -webkit-box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+  box-shadow: inset 0px 3px 14px 1px rgba(0,0,0,0.25);
+}
+#right #people {
+  overflow: hidden;
+  height: 34em;
+  padding: 1em 2em 0em;
+}
+#right #people .person:first {
+  margin-top: 3em;
+}
+#right #people .person:last {
+  margin-bottom: 2em;
+}
+#right #people .person {
+  float: left;
+  clear: both;
+  margin: 0.5em;
+}
+#right #people .person .avatar {
+  float: left;
+  margin-right: 10px;
+  border: solid 1px #ccc;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+#right #people .person .commonName {
+  float: left;
+  padding-top: 3px;
+  font-size: 10pt;
+}
+#right #peepsOnline {
+  padding-top: 0.5em;
+  clear: right;
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 12pt;
+  outline: none;
+}
+.userInfo {
+  background: rgba(0,0,0,0.85);
+  text-shadow: 1px 1px 1px #333;
+  padding: 1em;
+  width: 30em;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  outline: none;
+  color: #fff;
+  -webkit-box-shadow: 0px 3px 14px 5px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 3px 14px 5px rgba(0,0,0,0.35);
+  box-shadow: 0px 3px 14px 5px rgba(0,0,0,0.35);
+  z-index: 2;
+}
+.userInfo .mugshot {
+  width: 60px;
+  height: 60px;
+  float: left;
+  margin: 0px 15px 10px 0px;
+  border: solid 5px #fff;
+  border-bottom: solid 18px #fff;
+  -webkit-box-shadow: 1px 3px 5px 1px rgba(0,0,0,0.35);
+  -moz-box-shadow: 1px 3px 5px 1px rgba(0,0,0,0.35);
+  box-shadow: 1px 3px 5px 1px rgba(0,0,0,0.35);
+}
+.userInfo .nameTag {
+  float: left;
+  width: 21em;
+}
+.userInfo .nameTag .commonName {
+  float: left;
+  font-size: 14pt;
+  padding-bottom: 5px;
+}
+.userInfo .nameTag .title {
+  float: left;
+  clear: left;
+  font-size: 10pt;
+  color: #aaa;
+  padding-bottom: 5px;
+}
+.userInfo .contactInfo {
+  float: left;
+  padding-top: 5px;
+  width: 21em;
+}
+.userInfo .contactInfo .emailInfo,
+.userInfo .contactInfo .aimInfo {
+  padding-bottom: 5px;
+  color: #ccc;
+  clear: left;
+  float: left;
+  font-size: 10pt;
+  outline: none;
+}
+.userInfo .contactInfo .emailInfo .aimIcon,
+.userInfo .contactInfo .aimInfo .aimIcon,
+.userInfo .contactInfo .emailInfo .emailIcon,
+.userInfo .contactInfo .aimInfo .emailIcon {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  float: left;
+  background-repeat: no-repeat;
+}
+.userInfo .contactInfo .emailInfo .aimIcon,
+.userInfo .contactInfo .aimInfo .aimIcon {
+  background-image: url("/images/aim.png");
+}
+.userInfo .contactInfo .emailInfo .emailIcon,
+.userInfo .contactInfo .aimInfo .emailIcon {
+  background-image: url("/images/email.png");
+}
+.userInfo .contactInfo .emailInfo a,
+.userInfo .contactInfo .aimInfo a {
+  float: left;
+  color: #ccc;
+  text-decoration: none;
+}
+.userInfo .contactInfo .emailInfo a:hover,
+.userInfo .contactInfo .aimInfo a:hover {
+  color: #888;
+  outline: none;
+}
+#getCode {
+  padding: 1.5em;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #444;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#444));
+  background-image: -moz-linear-gradient(top, #333, #444);
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  font-size: 10pt;
+  position: absolute;
+  margin: 10em 8em;
+  text-shadow: 1px 1px 1px #000;
+  -webkit-box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.65);
+  -moz-box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.65);
+  box-shadow: 1px 1px 15px 1px rgba(0,0,0,0.65);
+  color: #fff;
+  line-height: 2em;
+}
+#getCode .code {
+  color: #e4f7ba;
+  font-family: "Droid Sans Mono";
+}
+#browserNotSupported {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: #fff;
+  text-align: center;
+}
+#browserNotSupported h1 {
+  font-size: 18pt;
+  margin: 6em 0em 2em;
+}
+#browserNotSupported p {
+  font-size: 12pt;
+  padding: 0.5em 0em;
+}

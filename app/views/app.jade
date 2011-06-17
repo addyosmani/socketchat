@@ -1,0 +1,41 @@
+!!! 5
+html(lang:"en")
+  head
+    meta(http-equiv="Content-Type", content="text/html;charset=UTF-8")
+    meta(name: "apple-mobile-web-app-capable", content: "yes")
+    meta(name: "apple-mobile-web-app-status-bar-style", content: "black-translucent")
+    meta(name: "viewport", content: "width = 1024, initial-scale = 1, user-scalable = no")
+    != SocketStream
+    title SocketChat
+  body
+    #wrapper
+      #main.views.hidden
+        #header
+          #name SocketChat
+        #left.column
+          #content
+              .nameTag
+             
+            #messageContainer
+              #messages
+                .message.template 
+                  .{{cdid}}
+                  .body
+
+            form#sendMessage
+              input(id='newMessage', type='text', name='message', autocomplete='off')
+              input(id='sendButton', type='submit', value='Send')
+              
+            #footer
+
+      form(onsubmit: 'return false')#signIn.views.hidden
+        h1 Please enter a username to begin:
+        input(type='text')
+
+      #browserNotSupported.hidden
+        #loveLetterToIE.views.hidden
+          h1 Sorry, IE is not supported as yet.
+        #sorryFirefoxOperaPeeps.views.hidden
+          h1 Your browser is not supported. Please use either Google Chrome or Apple Safari.
+      
+

@@ -1,0 +1,1 @@
+{"limiter":{"enable":true,"websockets":{"rps":10}},"redis":{"db_index":1}}
