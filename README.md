@@ -1,13 +1,7 @@
-##############
-# AOL Lounge #
-##############
+SocketStream Chat
+===
 
-Last updated: 23rd May 2011
-
-Internal AOL app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
-
-User data from Atlas is cached in Redis. No other databases are used.
-
+Chat app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
 
 INSTALL
 -------
@@ -22,7 +16,7 @@ Before you run SocketStream, you will need to install the following software:
 
 Instructions on how to install those items of software are included below for reference, and are taken from the home pages of those software libraries.
 
-Note: If you are using one of AOL's cloud servers, you may also need to install the following packages:
+Note: You may also need to install the following packages:
 
     yum install gettext-devel expat-devel curl-devel zlib-devel openssl-devel
   
@@ -54,8 +48,8 @@ Step 4 - Install SocketStream
     cd socketstream/
     npm install -g
     
-Step 4 - Install AOL Lounge
+Step 4 - Install SocketStream chat
 
-    git clone git@lounge.office.aol.com   (password: 'git')
-    cd adspeed/
+    git clone https://github.com/addyosmani/socketchat
+    cd socketchat/
     npm link
