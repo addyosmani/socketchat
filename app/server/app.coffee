@@ -10,7 +10,6 @@ exports.actions =
       cb false
 
   sendMessage: (message, cb) ->
-    # TODO: Check messages for malformed content, HTML tags, etc
     SS.publish.broadcast 'newMessage', {user: @session.user_id, body: message}
     cb true
   

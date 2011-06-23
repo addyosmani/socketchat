@@ -55,3 +55,5 @@ Step 4 - Install SocketChat
     git clone https://github.com/addyosmani/socketchat
     cd socketchat/
     npm link
+
+The complete installation process should take less than 20 minutes including dependencies. 

@@ -19,6 +19,7 @@ exports.init = ->
 
 # PRIVATE
  
+# Display the user sign-in form
 displaySignInForm = ->
   $('#signIn').show().submit ->
     SS.server.app.signIn $('#signIn').find('input').val(), (response) ->
