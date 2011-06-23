@@ -1,3 +1,5 @@
+// Main Styles
+
 @import 'helpers'
 @import 'fonts'
 
@@ -114,44 +116,18 @@ a:hover
       margin-bottom 2em
 
     .message
-      float left
-      width 100%
-      border solid 1px #ccc
-      round(5px)
-      clear both
-    
-      border 0px solid rgba(0,0,0,0.49)
-      border-radius 10px
-    
-      .avatar
+      clear left
+      font-size 12pt
+      padding 10px
+       
+      .user
+        font-weight bold
         float left
-        width 30px
-        height 30px
-        border solid 1px #ccc
-        margin 0.5em
-        cursor pointer
-
+        width 100px
+    
       .body
         float left
-        margin 0.7em
-        font-size 12pt
-        width 680px
        
-      .date
-        float right
-        opacity 0
-        -webkit-transition opacity 0.5s linear
-        text-align right
-        width 110px
-        position relative
-        z-index 1000
-     
-     .message:hover .date
-       opacity 1
-       -webkit-transition opacity 0.5s linear
-       padding-top 15px
-        
-    
   form#sendMessage
     position relative
     background #444
@@ -193,149 +169,5 @@ a:hover
     input[type='submit']:hover
       box-shadow 0 0 10px 4px rgba(123,255,0,0.5)
       cursor pointer
-      
-  #footer
-    line-height 1.5em
-    padding 1.5em 0
-    a
-      color #444
-      text-decoration none
-
-#right
-  float right
-  width 34em
-
-  #peopleContainer
-    height 35em
-    border solid 1px #ccc
-    round(5px)
-    
-    border 0px solid rgba(0,0,0,0.49)
-    border-radius 10px
-    background-image -moz-linear-gradient(top, #fcfcfc, #f7f7f7 3%, #f2f2f2 12%, #d9d9d9 90%, #bfbfbf)
-    background-image -webkit-gradient(linear, center top, center bottom, from(#fcfcfc), to(#bfbfbf), color-stop(3%, #f7f7f7), color-stop(12%, #f2f2f2), color-stop(90%, #d9d9d9))
-    box-shadow inset 0px 3px 14px 1px rgba(0,0,0,0.25)        
-    
-  #people
-    overflow hidden
-    height 34em
-    padding 1em 2em 0em
-
-    .person:first
-      margin-top 3em
-      
-    .person:last
-      margin-bottom 2em
-
-    .person
-      float left
-      clear both
-      margin 0.5em      
-
-      .avatar
-        float left
-        margin-right 10px
-        border solid 1px #ccc
-        width 20px
-        height 20px
-        cursor pointer
-      
-      .commonName
-        float left
-        padding-top 3px
-        font-size 10pt
-
-  #peepsOnline
-    padding-top 0.5em
-    clear right
-    text-align center
-    margin-bottom 1em
-    font-size 12pt
-    outline none
-    
-.userInfo
-  background rgba(0,0,0,0.85)
-  text-shadow 1px 1px 1px #333
-  padding 1em
-  width 30em
-  round 7px
-  outline none
-  color white
-  box-shadow 0px 3px 14px 5px rgba(0,0,0,0.35)
-  z-index 2
-
-  .mugshot
-    width 60px
-    height 60px
-    float left
-    margin 0px 15px 10px 0px
-    border solid 5px white
-    border-bottom solid 18px white 
-    box-shadow 1px 3px 5px 1px rgba(0,0,0,0.35)
-
-  .nameTag
-    float left
-    width 21em
-
-    .name a, .name a:visited
-      float left
-      font-size 14pt
-      padding-bottom 5px
-      color white
-      text-decoration none
-    
-    .name a:hover
-      color #ccc
-
-    .title
-      float left
-      clear left
-      font-size 10pt
-      color #aaa
-      padding-bottom 5px
-
-  .contactInfo
-    float left
-    padding-top 5px
-    width 21em
-
-    .emailInfo, .aimInfo
-      padding-bottom 5px
-      color #ccc  
-      clear left
-      float left
-      font-size 10pt
-      outline none     
-
-      a
-        float left
-        color #ccc
-        text-decoration none        
-
-      a:hover
-        color #888
-        outline none
 
 
-
-// BROWSER NOT SUPPORTED ERROR MESSAGE
-
-#browserNotSupported
-  position absolute
-  top 0px
-  left 0px
-  right 0px
-  bottom 0px
-  width 100%
-  height 100%
-  z-index 2
-  background white
-  text-align center
-
-  h1
-    font-size 18pt
-    margin 6em 0em 2em
-
-  p
-    font-size 12pt
-    padding 0.5em 0em

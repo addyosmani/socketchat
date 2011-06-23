@@ -16,9 +16,6 @@ html(lang:"en")
           #content
             #messageContainer
               #messages
-                .message.template 
-                  .user
-                  .body
 
             form#sendMessage
               input(id='newMessage', type='text', name='message', autocomplete='off')
@@ -29,11 +26,4 @@ html(lang:"en")
       form(onsubmit: 'return false')#signIn.views.hidden
         h1 Please enter a username to begin:
         input(type='text')
-
-      #browserNotSupported.hidden
-        #loveLetterToIE.views.hidden
-          h1 Sorry, IE is not supported as yet.
-        #sorryFirefoxOperaPeeps.views.hidden
-          h1 Your browser is not supported. Please use either Google Chrome or Apple Safari.
-      
 

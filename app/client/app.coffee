@@ -1,19 +1,34 @@
-exports.init = -> if SS.client.browser.isSupported() then loadApp() else SS.client.browser.showIncompatibleMessage()
+# Client-side code
 
-loadApp = ->
+# This function is called automatically once the websocket is setup
+exports.init = ->
   $('.message.template').hide()
-  SS.server.app.init (user) -> if user then $('#main').show() else displaySignInForm()
+  SS.server.app.init (user) ->
+    if user then $('#main').show() else displaySignInForm()
+    
+  # Bind to Submit button
   $('form#sendMessage').submit ->
     newMessage = $('#newMessage').val()
-    SS.server.app.sendMessage newMessage, (response) -> if response.error then alert(response.error) else $('#newMessage').val('')
-    false
-  SS.events.on 'newMessage', (params) -> renderMessage(params)
-  
-displaySignInForm = ->
-  $('#signIn').show().submit ->
-    SS.server.app.signIn $('#signIn').find('input').val(), (response) -> $('#signInError').remove() and if response is false then $('#signIn').append("<p id='signInError'>The name you provided was incorrect. Sorry.</p>").find('input').val('') else displayMainScreen()
+    SS.server.app.sendMessage newMessage, (response) ->
+      if response.error then alert(response.error) else $('#newMessage').val('')
     false
     
-displayMainScreen = -> $('#signIn').fadeOut(230) and $('#main').show()
+  # Bind to new incoming message event
+  SS.events.on 'newMessage', renderMessage
 
-renderMessage = (params) -> $('.message').clone().find('.body').html(params.body).parent().find('.user').html(params.cdid).parent().appendTo("#messages").show() and SS.client.scroll.down('#messages', 450)
+
+# PRIVATE
+ 
+displaySignInForm = ->
+  $('#signIn').show().submit ->
+    SS.server.app.signIn $('#signIn').find('input').val(), (response) ->
+      $('#signInError').remove()
+      displayMainScreen()
+    false
+    
+displayMainScreen = ->
+  $('#signIn').fadeOut(230) and $('#main').show()
+
+renderMessage = (params) ->
+  $('#templates-message').tmpl(params).appendTo('#messages')
+  SS.client.scroll.down('#messages', 450)
