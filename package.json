@@ -2,7 +2,7 @@
   "name":         "aol_lounge",
   "description":  "A simple group chat app to demonstrate the SocketStream framework",
   "version":      "0.0.1",
-  "author":       "Paul Jensen <paulbjensen@gmail.com>",
+  "author":       "Paul Jensen <paulbjensen@gmail.com>, Addy Osmani <addyosmani@gmail.com>, Owen Barnes <owen.barnes@teamaol.com>",
   "dependencies": {
     "request":  ">= 1.9.5"
   },
