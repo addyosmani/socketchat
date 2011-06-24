@@ -8,7 +8,6 @@ SocketStream app which demos the open source SocketStream framework at https://g
 INSTALL
 -------
 
-To get Node and Redis up and running on the cloud servers:
 
 Before you run SocketStream, you will need to install the following software:
 
@@ -50,7 +49,7 @@ Step 4 - Install SocketStream
     cd socketstream/
     npm install -g
     
-Step 4 - Install SocketChat
+Step 5 - Install SocketChat
 
     git clone https://github.com/addyosmani/socketchat
     cd socketchat/
