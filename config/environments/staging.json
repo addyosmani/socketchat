@@ -1,1 +1,10 @@
-{"port":80}
+{
+  "http": {
+    "port":               80,
+    "hostname":           "0.0.0.0"
+  },
+  "browser_check": {
+    "enabled":            true,
+    "strict":             true
+  }
+}
