@@ -2,7 +2,7 @@
 # SocketStream Chat #
 #####################
 
-SocketStream app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
+SocketStream app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream. For a complete tutorial on building and running this application, please see: http://addyosmani.com/blog/building-real-time-coffeescript-web-applications-with-socketstream/.
 
 
 INSTALL
