@@ -1,9 +1,15 @@
+<<<<<<< HEAD
 #####################
 # SocketStream Chat #
 #####################
 
 SocketStream app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
+=======
+SocketStream Chat
+===
+>>>>>>> 04aaac510358d204db4cc87b49ae2c4c2e1af5c2
 
+Chat app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
 
 INSTALL
 -------
@@ -49,6 +55,7 @@ Step 4 - Install SocketStream
     cd socketstream/
     npm install -g
     
+<<<<<<< HEAD
 Step 5 - Install SocketChat
 
     git clone https://github.com/addyosmani/socketchat
@@ -56,3 +63,10 @@ Step 5 - Install SocketChat
     npm link
 
 The complete installation process should take less than 20 minutes including dependencies. 
+=======
+Step 4 - Install SocketStream chat
+
+    git clone https://github.com/addyosmani/socketchat
+    cd socketchat/
+    npm link
+>>>>>>> 04aaac510358d204db4cc87b49ae2c4c2e1af5c2
