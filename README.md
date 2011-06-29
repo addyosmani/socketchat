@@ -53,3 +53,7 @@ Step 4 - Install SocketStream chat
     git clone https://github.com/addyosmani/socketchat
     cd socketchat/
     npm link
+
+Step 5 - Run SocketStream cht
+
+    socketstream start
