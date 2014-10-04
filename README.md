@@ -1,6 +1,8 @@
 SocketStream Chat
 ===
 
+NOTE - This is for SocketStream 0.1.0, not the current version (0.3).
+
 Chat app which demos the open source SocketStream framework at https://github.com/socketstream/socketstream
 
 INSTALL
